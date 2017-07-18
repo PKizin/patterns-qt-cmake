@@ -19,6 +19,8 @@ file(GLOB SOURCES
     decorator/*.cpp
     adapter/*.h
     adapter/*.cpp
+    proxy/*.h
+    proxy/*.cpp
 )
 
 include_directories(
@@ -29,6 +31,7 @@ include_directories(
     bridge
     decorator
     adapter
+    proxy
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

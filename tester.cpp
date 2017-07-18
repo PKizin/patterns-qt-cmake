@@ -31,6 +31,9 @@
 #include "ad_base.h"
 #include "ad_adapter.h"
 
+#include "px_proxy.h"
+
+
 void testSingleton();
 void testPrototype();
 void testFactoryMethod();
@@ -38,18 +41,20 @@ void testAbstractFactory();
 void testBridge();
 void testDecorator();
 void testAdapter();
+void testProxy();
 
-void Tester::test_creation_patterns() {
+void Tester::test_creating_patterns() {
     testSingleton();
     testPrototype();
     testFactoryMethod();
     testAbstractFactory();
 }
 
-void Tester::test_structure_patterns() {
+void Tester::test_structural_patterns() {
     testBridge();
     testDecorator();
     testAdapter();
+    testProxy();
 }
 
 void testSingleton() {
@@ -203,6 +208,16 @@ void testAdapter() {
 
     a = new Adapter(new Base);
     a->info();
+
+    std::cout << '\n';
+}
+
+void testProxy() {
+    using namespace proxy;
+
+    Base* p;
+    p = new Proxy();
+    p->info();
 
     std::cout << '\n';
 }

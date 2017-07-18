@@ -3,8 +3,8 @@
 
 class Tester {
 public:
-    static void test_creation_patterns();
-    static void test_structure_patterns();
+    static void test_creating_patterns();
+    static void test_structural_patterns();
 
 private:
     Tester();
